@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:weightSum="100">
+
+    <WebView
+        android:id="@+id/webVDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="25"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" 
+        android:layout_weight="75"
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/etServerURL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="http://192.168.1.103:8080/jsfs.html"
+            android:textSize="10dp"
+            android:lines="2" />
+
+        <TextView 
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/tvBotStatus"
+           android:text="Bot Status: OFF"/>
+        
+        <Button
+            android:id="@+id/buOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn  ON" />
+
+        <Button
+            android:id="@+id/buOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn OFF" />
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+        	android:layout_height = "match_parent">
+        	<ImageView 
+        	    android:id="@+id/ivSUP"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_alignParentTop="true"
+            	android:layout_centerHorizontal="true"
+            	android:src="@drawable/servo_move_64high"/>
+        	
+        	<ImageView 
+        	    android:id="@+id/ivSDOWN"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:rotation="180"
+            	android:layout_alignParentBottom="true"
+            	android:layout_centerHorizontal="true"
+            	android:src="@drawable/servo_move_64high"/>
+        	
+        	<ImageView 
+        	    android:id="@+id/ivSLEFT"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:rotation="270"
+            	android:layout_alignParentLeft="true"
+            	android:layout_centerVertical="true"
+            	android:src="@drawable/servo_move_64high"/>
+        	
+        	<ImageView 
+        	    android:id="@+id/ivSRIGHT"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:rotation="90"
+            	android:layout_alignParentRight="true"
+            	android:layout_centerVertical="true"
+            	android:src="@drawable/servo_move_64high"/>
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

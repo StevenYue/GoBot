@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <EditTextPreference 
+        android:title="URL"
+        android:key="etpURL"
+        android:summary="Type the server URL"
+        android:defaultValue="http://192.168.1.0:8080/jsfs.html"/>
+    
+    
+    <ListPreference 
+        android:title="List"
+        android:summary="This is a List"
+        android:key="listKEY"
+        android:entries="@array/URLlistEntry"
+        android:entryValues="@array/URLlistValue"/>
+</PreferenceScreen>
